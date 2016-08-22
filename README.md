@@ -6,9 +6,9 @@ mfc-node lets you follow and archive your favorite models' shows on myfreecams.c
 This is an attempt to create a script similar to [capturbate-node](https://github.com/SN4T14/capturebate-node) based on different pieces of code found in the Internet.
 
 Credits:
-	* [capturbate-node](https://github.com/SN4T14/capturebate-node)
+* [capturbate-node](https://github.com/SN4T14/capturebate-node)
 
-	* [Sembiance/get_mfc_video_url.js](https://gist.github.com/Sembiance/df151de0006a0bf8ae54)
+* [Sembiance/get_mfc_video_url.js](https://gist.github.com/Sembiance/df151de0006a0bf8ae54)
 
 Requirements
 ==========
