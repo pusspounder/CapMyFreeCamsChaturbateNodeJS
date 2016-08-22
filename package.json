@@ -1,0 +1,29 @@
+{
+	"name": "mfc-node",
+	"version": "0.0.1",
+	"description": "MyFreeCams Recorder",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/sstativa/mfc-node.git"
+	},
+	"author": "sstativa",
+	"license": "WTFPL",
+	"bugs": {
+		"url": "https://github.com/sstativa/mfc-node/issues"
+	},
+	"homepage": "https://github.com/sstativa/mfc-node",
+	"dependencies": {
+		"bluebird": "^2.9.25",
+		"js-yaml": "^3.3.1",
+		"mkdirp": "^0.5.1",
+		"moment": "^2.10.3",
+		"string": "^3.1.1",
+		"underscore": "latest",
+		"websocket": "latest",
+		"colors": "latest"
+	}
+}
