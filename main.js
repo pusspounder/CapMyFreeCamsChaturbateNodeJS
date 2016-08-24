@@ -71,40 +71,52 @@ function getOnlineModels(fileno) {
 
     printDebugMsg(url);
 
-    http.get(url, function(response) {
-      var rawHTML = '';
+    http
+      .get(url, function(response) {
+        var rawHTML = '';
 
-      response.on('data', function(data) {
-        rawHTML += data;
-      });
+        if (response.statusCode == 200) {
+          response.on('data', function(data) {
+            rawHTML += data;
+          });
 
-      response.on('end', function() {
-        rawHTML = rawHTML.toString('utf8');
-        rawHTML = rawHTML.substring(rawHTML.indexOf('{'), rawHTML.indexOf("\n") - 1);
-        rawHTML = rawHTML.replace(/[^\x20-\x7E]+/g, '');
+          response.on('end', function() {
+            try {
+              rawHTML = rawHTML.toString('utf8');
+              rawHTML = rawHTML.substring(rawHTML.indexOf('{'), rawHTML.indexOf("\n") - 1);
+              rawHTML = rawHTML.replace(/[^\x20-\x7E]+/g, '');
 
-        var data = JSON.parse(rawHTML);
+              var data = JSON.parse(rawHTML);
 
-        var onlineModels = [];
+              var onlineModels = [];
 
-        for (var key in data) {
-          if (data.hasOwnProperty(key) && typeof data[key].nm != 'undefined' && typeof data[key].uid != 'undefined') {
-            onlineModels.push({
-              nm: data[key].nm,
-              uid: data[key].uid,
-              vs: data[key].vs,
-              camserv: data[key].u.camserv,
-              camscore: data[key].m.camscore,
-              new_model: data[key].m.new_model
-            });
-          }
+              for (var key in data) {
+                if (data.hasOwnProperty(key) && typeof data[key].nm != 'undefined' && typeof data[key].uid != 'undefined') {
+                  onlineModels.push({
+                    nm: data[key].nm,
+                    uid: data[key].uid,
+                    vs: data[key].vs,
+                    camserv: data[key].u.camserv,
+                    camscore: data[key].m.camscore,
+                    new_model: data[key].m.new_model
+                  });
+                }
+              }
+
+              printMsg(onlineModels.length  + ' model(s) online');
+
+              resolve(onlineModels);
+            } catch (err) {
+              reject(err);
+            }
+          });
+        } else {
+          reject('Invalid response: ' + response.statusCode);
         }
-
-        printMsg(onlineModels.length  + ' model(s) online');
-
-        resolve(onlineModels);
+      })
+      .on('error', function(err) {
+        reject(err);
       });
-    });
   }).timeout(30000); // 30 secs
 }
 
