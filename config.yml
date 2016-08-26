@@ -1,13 +1,28 @@
-captureDirectory: captures # Where you want the captures to be saved to
-completeDirectory: complete # Where you want the "finalized" captures to be moved to as soon as model stops streaming
-modelScanInterval: 30 # In seconds, how often to check for newly-online models
+captureDirectory: 'capturing'
+completeDirectory: 'captured'
+modelScanInterval: 300
 debug: true
-# here will be ids of your favourite models,
-# if you know model's id you can add it straight away here (check YAML specification for collections)
-models: []
-# if you don't know id of the model, you can add her name here,
-# the next time the model goes online her id will be added to "models" automatically
-includeModels: []
-# if you don't want to capture the model anymore, but you don't know her id, you can add her name here
-# the next time the model goes online her id will be removed from "models" automatically
+models:
+  - 20249367
+  - 17030607
+  - 20346887
+  - 10272360
+  - 14554856
+  - 15406039
+  - 16915028
+  - 2530502
+  - 5526194
+  - 8339561
+  - 8450555
+  - 9759444
+  - 9798847
+  - 20346887
+  - 10876762
+  - 15042071
+  - 21090122
+  - 11549213
+  - 21578748
+  - 21948600
+includeModels:
+  - AURA_HEHMSOTH
 excludeModels: []
