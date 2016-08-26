@@ -1,39 +1,102 @@
-mfc-node
+CapMyFreeCamsNodeJS (CapMFCNodeJS) (`mfc-node` with a better name and `readme.md`!)
 ==========
 
-mfc-node lets you follow and archive your favorite models' shows on myfreecams.com
+### Credit ###
 
-This is an attempt to create a script similar to [capturbate-node](https://github.com/SN4T14/capturebate-node) based on different pieces of code found in the Internet.
+This is a fork of [mfc-node](https://github.com/sstativa/mfc-node), just with a better name and `readme.md` and `FFMPEG.exe` included!
 
-Credits:
-* [capturbate-node](https://github.com/SN4T14/capturebate-node)
+`mfc-node` is based on [capturbate-node](https://github.com/SN4T14/capturebate-node).
 
-* [Sembiance/get_mfc_video_url.js](https://gist.github.com/Sembiance/df151de0006a0bf8ae54)
 
-Requirements
-==========
-(Debian 7, minimum)
+### About ###
 
-[Node.js](https://nodejs.org/download/) used to run mfc-node, hence the name.
+CapMyFreeCamsNodeJS will automatically record MyFreeCams.com streams.
 
-[ffmpeg](https://www.ffmpeg.org/download.html)
+CapMFCNodeJS is a Node.JS application that should run on all platforms that can run Node.JS, e.g. Windows, Linux, Mac.
+
+This instructions are for *Windows*!
 
 Setup
+==========
+
+* [Node.JS](https://nodejs.org/download/)
+	>Basically you need to have `node.exe` and `npm.cmd` in your `PATH`. I recommend using `Cmder`, downloading `node-v6.4.0-win-x64.zip` and putting it in your `PATH`. You don't even have to *"install"* anything, it's portable.
+
+* `FFMPEG.exe`
+	>Included!
+
+* CapMFCodeJS
+	>On GitHub, click `Clone or download`, `Download ZIP`.
+
+* Via `Command Prompt` or `Cmder`
+    	```
+    	cd CapMyFreeCamsNodeJS # change to the package directory
+    	npm install # install package
+		```
+
+Config
 ===========
 
-Install requirements, run `npm install` in the same folder as main.js is.
+Sample `config.yml`
 
-Edit `config.yml` file and add your favorite models:
+```
+# Folder for streams in progress.
+captureDirectory: '%CD%\capturing'
 
-* `models` -  here will be ids of your favorite models, if you know model's id you should add it here (check YAML specification for collections)
-* `includeModels` - if you don't know id of the model, you can add her name here, the next time the model goes online her id will be added to "models" automatically
-* `excludeModels` - if you don't want to capture the model anymore, but you don't know her id, you can add her name here the next time the model goes online her id will be removed from "models" automatically
+# Folder for finished streams.
+completeDirectory: '%CD%\captured'
 
-Please note, the script reads config only ones at start. If you want to add or remove model when the script is running, you should use `updates.yml` file. The script looks for changes in this file every cycle (`modelScanInterval`).
+# How often to check for new models in seconds.
+modelScanInterval: 300
 
-Be mindful when capturing many streams at once to have plenty of space on disk and the bandwidth available or you'll end up dropping a lot of frames and the files will be useless.
+debug: true
 
-Running & Output
+# Model ID.
+# To get Model ID, go to model's profile (e.g. http://profiles.myfreecams.com/GoddessDeedee), "View Page Source", search for "nProfileUserId"
+models:
+  - 20249367
+  - 17030607
+  - 20346887
+  - 10272360
+  - 14554856
+  - 15406039
+  - 16915028
+  - 2530502
+  - 5526194
+  - 8339561
+  - 8450555
+  - 9759444
+  - 9798847
+  - 20346887
+  - 10876762
+  - 15042071
+  - 21090122
+  - 11549213
+  - 21578748
+  - 21948600
+
+# The next time the model comes online, her Model ID will be ADDED to "models" above.
+includeModels:
+  - AURA_HEHMSOTH
+
+# The next time the model comes online, her Model ID will be REMOVED from "models"
+excludeModels: []
+```
+**NOTE:** `config.yml` is read only once, at start. If you want to add or remove a model while the package is running, use `updates.yml`.
+
+Run
 ===========
 
-To start capturing streams you need to run `node main.js` I recommend you do this in [screen](https://www.gnu.org/software/screen/) as that'll keep running if you lose connection to the machine or otherwise close your shell.
+Via `Command Prompt` or `Cmder` (recommended):
+
+```
+  cd CapMyFreeCamsNodeJS # change to the package directory
+  node main.js # run package
+```
+
+Convert *.TS files to *.MKV
+===========
+
+Run `runConvert.bat`.
+
+**NOTE:** `runConvert.bat` will delete all `*.TS` files under 50 MB. You can adjust this number in `mainconvert.bat`
