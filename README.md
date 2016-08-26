@@ -1,9 +1,13 @@
 CapMyFreeCamsNodeJS (CapMFCNodeJS) (`mfc-node` with a better name and `readme.md`!)
 ==========
 
+https://github.com/pusspounder
+
+https://gitlab.comeCamsNodeJS
+
 ### Credit ###
 
-This is a fork of [mfc-node](https://github.com/sstativa/mfc-node), just with a better name and `readme.md` and `FFMPEG.exe` included!
+This is a fork of [mfc-node](https://github.com/sstativa/mfc-node), just with a better name, better `readme.md` and `FFMPEG.exe` included!
 
 `mfc-node` is based on [capturbate-node](https://github.com/SN4T14/capturebate-node).
 
@@ -20,19 +24,18 @@ Setup
 ==========
 
 * [Node.JS](https://nodejs.org/download/)
-	>Basically you need to have `node.exe` and `npm.cmd` in your `PATH`. I recommend using `Cmder`, downloading `node-v6.4.0-win-x64.zip` and putting it in your `PATH`. You don't even have to *"install"* anything, it's portable.
+  >Basically you need to have `node.exe` and `npm.cmd` in your `PATH`. I recommend using `Cmder`, downloading `node-v6.4.0-win-x64.zip` and putting it in your `PATH`. You don't even have to *"install"* anything, it's portable.
 
 * `FFMPEG.exe`
-	>Included!
+  >Included!
 
-* CapMFCodeJS
-	>On GitHub, click `Clone or download`, `Download ZIP`.
+* CapMFCNodeJS
+  >On GitHub, click `Clone or download`, `Download ZIP`.
 
 * Via `Command Prompt` or `Cmder`
-    	```
-    	cd CapMyFreeCamsNodeJS # change to the package directory
-    	npm install # install package
-		```
+    > cd CapMyFreeCamsNodeJS # change to the package directory
+
+    > npm install # install package
 
 Config
 ===========
@@ -51,8 +54,8 @@ modelScanInterval: 300
 
 debug: true
 
-# Model ID.
-# To get Model ID, go to model's profile (e.g. http://profiles.myfreecams.com/GoddessDeedee), "View Page Source", search for "nProfileUserId"
+# MyFreeCams Model ID.
+# To get Model ID, go to model's profile, "View Page Source", search for "nProfileUserId". In Chrome/Chromium "view-source:http://profiles.myfreecams.com/target"
 models:
 - 20249367 # KatyaFods
 - 17030607 # oKRYSTALo
