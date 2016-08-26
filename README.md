@@ -54,26 +54,25 @@ debug: true
 # Model ID.
 # To get Model ID, go to model's profile (e.g. http://profiles.myfreecams.com/GoddessDeedee), "View Page Source", search for "nProfileUserId"
 models:
-  - 20249367
-  - 17030607
-  - 20346887
-  - 10272360
-  - 14554856
-  - 15406039
-  - 16915028
-  - 2530502
-  - 5526194
-  - 8339561
-  - 8450555
-  - 9759444
-  - 9798847
-  - 20346887
-  - 10876762
-  - 15042071
-  - 21090122
-  - 11549213
-  - 21578748
-  - 21948600
+- 20249367 # KatyaFods
+- 17030607 # oKRYSTALo
+- 10272360 # XViciousLoveX
+- 14554856 # NicolettXXX
+- 15406039 # StunningAna
+- 16915028 # AriannaSecret
+- 2530502 # AdorableKye
+- 5526194 # KATEELIFE
+- 8339561 # kannalol
+- 8450555 # AlisOnFire
+- 9759444 # Geniva_
+- 9798847 # B_E_L_L_E_
+- 20346887 # BaeGotBooty
+- 10876762 # JadineIsNasty
+- 15042071 # Tat2peach
+- 21090122 # Cutekitty747
+- 11549213 # Jayde_Phoenix
+- 21578748 # Lolasays
+- 21948600 # TwerkAndChill
 
 # The next time the model comes online, her Model ID will be ADDED to "models" above.
 includeModels:
