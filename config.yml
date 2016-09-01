@@ -22,6 +22,9 @@ models:
   - 11549213 # Jayde_Phoenix
   - 21578748 # Lolasays
   - 21948600 # TwerkAndChill
+  - 21310821 # Beawolfx
+  - 21322349 # beawolfxo
 includeModels:
-  - AURA_HEHMSOTH
-excludeModels: []
+  - MODELNAME
+excludeModels:
+  - MODELNAME
