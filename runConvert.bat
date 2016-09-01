@@ -2,6 +2,6 @@
 
 pushd %cd%
 
-set target=captured
+set target=%cd%\captured
 
-call mainconvert.bat %cd%\%target%
+call mainconvert.bat %target%

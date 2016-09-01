@@ -27,7 +27,7 @@ set output=%output:~0,-3%mkv"
 
 echo.
 echo ==================================================
-echo Converting %~nx1 to MK, copying video and audio stream directly, no transcoding!...
+echo Converting %~nx1 to MKV, copying video and audio stream directly, no transcoding!...
 echo ==================================================
 rem -y overwite output without asking
 rem ffmpeg.exe -loglevel warning -y -i %1 -c:v copy -c:a copy %output%
