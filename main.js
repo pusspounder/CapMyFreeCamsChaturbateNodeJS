@@ -13,7 +13,7 @@ var childProcess = require('child_process');
 var path = require('path');
 
 function getCurrentDateTime() {
-  return moment().format('YYYY-MM-DDTHHmmss'); // The only true way of writing out dates and times, ISO 8601
+  return moment().format('YYYYMMDD-HHmmss');
 };
 
 function printMsg(msg) {
@@ -49,7 +49,7 @@ function getFileno() {
           var parts = /\{%22fileno%22:%22([0-9_]*)%22\}/.exec(message.utf8Data);
 
           if (parts && parts[1]) {
-            printDebugMsg('fileno = ' + parts[1]);
+            // printDebugMsg('fileno = ' + parts[1]);
 
             connection.close();
             resolve(parts[1]);
@@ -69,7 +69,7 @@ function getOnlineModels(fileno) {
   return new Promise(function(resolve, reject) {
     var url = 'http://www.myfreecams.com/mfc2/php/mobj.php?f=' + fileno + '&s=xchat20';
 
-    printDebugMsg(url);
+    // printDebugMsg(url);
 
     http
       .get(url, function(response) {
