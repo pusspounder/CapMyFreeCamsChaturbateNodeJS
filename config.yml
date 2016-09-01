@@ -25,6 +25,6 @@ models:
   - 21310821 # Beawolfx
   - 21322349 # beawolfxo
 includeModels:
-  - MODELNAME
+  - MODELNAMETOSTARTCAPTURING
 excludeModels:
-  - MODELNAME
+  - MODELNAMETOSTOPCAPTURING
