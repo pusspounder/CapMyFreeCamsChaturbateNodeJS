@@ -1,7 +1,3 @@
-@echo off
+@set target=%cd%\captured
 
-pushd %cd%
-
-set target=%cd%\captured
-
-call mainconvert.bat %target%
+@start /b mainconvert.bat %target% "deleteno"
