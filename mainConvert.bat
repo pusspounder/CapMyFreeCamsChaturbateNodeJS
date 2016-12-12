@@ -1,12 +1,17 @@
 @echo off
 
 rem used in both CapMyFreeCamsNodeJS and CapChaturbate!
-rem just change "inputfiletype" and "output"
+rem just change "inputfiletype" and "output" ("output", not just "outputfiletype"!)
 
-set savedir=%1
 set inputfiletype=*.ts
 set outputfiletype=mkv
+
+rem ============================================================================
+
+set savedir=%1
 set arg1=%~2
+set arg2=%~3
+
 rem 10mb 10485760
 rem 50mb 52428800
 rem 100mb 104857600
@@ -31,6 +36,7 @@ goto :eof
 )
 
 set output=%1
+rem -4 for *.xxx, -3 for *.xx
 set output=%output:~0,-3%%outputfiletype%
 
 echo.
@@ -39,9 +45,15 @@ echo Converting %~nx1 to %outputfiletype%, copying video and audio stream direct
 echo ==================================================
 
 rem -y overwite output without asking
-rem less verbose:
-rem ffmpeg.exe -loglevel warning -y -i %1 -c:v copy -c:a copy %output%
-ffmpeg.exe -y -i %1 -c:v copy -c:a copy %output%
+rem less verbose: ffmpeg.exe -loglevel warning -y -i %1 -c:v copy -c:a copy %output%
+
+if "%arg2%" == "ffmpeg32" (
+	ffmpeg32.exe -y -i %1 -c:v copy -c:a copy %output%
+	)
+
+if "%arg2%" == "ffmpeg64" (
+	ffmpeg64.exe -y -i %1 -c:v copy -c:a copy %output%
+	)
 
 if "%arg1%" == "deleteyes" (
 	call :setsize %output%
@@ -65,8 +77,9 @@ goto :eof
 
 rem ----------------------------------------------------------------------------
 
-rem ----------------------------------------------------------------------------
 :setsize
 set size=%~z1
 goto :eof
 rem ----------------------------------------------------------------------------
+
+rem ============================================================================

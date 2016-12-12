@@ -11,7 +11,6 @@ This is a fork of [mfc-node](https://github.com/sstativa/mfc-node), just with a 
 
 `mfc-node` is based on [capturbate-node](https://github.com/SN4T14/capturebate-node).
 
-
 ### About ###
 
 CapMyFreeCamsNodeJS will automatically record MyFreeCams.com streams.
@@ -94,12 +93,14 @@ Via `Command Prompt` or `Cmder` (recommended):
 
 ```
   cd CapMyFreeCamsNodeJS # change to the package directory
-  node main.js # run package
+  node main32 # 32 bit
+  or
+  node main64 # 64 bit
 ```
 
 Convert *.TS files to *.MKV
 ===========
 
-Run `runConvert.bat`.
+Run `runConvert*.bat`.
 
-**NOTE:** `runConvert.bat` will delete all `*.TS` files under 50 MB. You can adjust this number in `mainconvert.bat`
+**NOTE:** `runConvert*.bat` will delete all `*.TS` files under 50 MB. You can adjust this number in `mainconvert.bat`
