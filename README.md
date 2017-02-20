@@ -1,9 +1,17 @@
 CapMyFreeCamsNodeJS (CapMFCNodeJS) (`mfc-node` with a better name and `readme.md`!)
 ==========
 
+### About ###
+
+CapMyFreeCamsNodeJS will automatically record MyFreeCams.com streams.
+
+CapMFCNodeJS is a Node.JS application that should run on all platforms that can run Node.JS, e.g. Windows, Linux, Mac.
+
 https://gitlab.com/pusspounder (All of my work)
 
 https://github.com/pusspounder (Some of my work that requires GitHub)
+
+**The following instructions are for *Windows* only!**
 
 ### Credit ###
 
@@ -11,25 +19,16 @@ This is a fork of [mfc-node](https://github.com/sstativa/mfc-node), just with a 
 
 `mfc-node` is based on [capturbate-node](https://github.com/SN4T14/capturebate-node).
 
-### About ###
-
-CapMyFreeCamsNodeJS will automatically record MyFreeCams.com streams.
-
-CapMFCNodeJS is a Node.JS application that should run on all platforms that can run Node.JS, e.g. Windows, Linux, Mac.
-
-**The following instructions are for *Windows* only!**
-
-Setup
+Download/Setup
 ==========
 
 * [Node.JS](https://nodejs.org/download/)
   >Basically you need to have `node.exe` and `npm.cmd` in your `PATH`. I recommend using `Cmder`, downloading `node-v6.4.0-win-x64.zip` and putting it in your `PATH`. You don't even have to *"install"* anything, it's portable.
 
-* `FFMPEG.exe`
-  >Included!
-
 * CapMyFreeCamsNodeJS
-  >On GitHub, click `Clone or download`, `Download ZIP`.
+  >Download from either GitLab or GitHub:
+  >https://github.com/pusspounder/CapMyFreeCamsNodeJS/archive/master.zip
+  >https://gitlab.com/pusspounder/CapMyFreeCamsNodeJS/repository/archive.zip
 
 * Via `Command Prompt` or `Cmder`
     > cd CapMyFreeCamsNodeJS # change to the package directory
@@ -56,24 +55,14 @@ debug: true
 # MyFreeCams Model ID.
 # To get Model ID, go to model's profile, "View Page Source", search for "nProfileUserId". In Chrome/Chromium "view-source:http://profiles.myfreecams.com/target"
 models:
-- 20249367 # KatyaFods
-- 17030607 # oKRYSTALo
 - 10272360 # XViciousLoveX
-- 14554856 # NicolettXXX
 - 15406039 # StunningAna
 - 16915028 # AriannaSecret
-- 2530502 # AdorableKye
 - 5526194 # KATEELIFE
-- 8339561 # kannalol
 - 8450555 # AlisOnFire
 - 9759444 # Geniva_
 - 9798847 # B_E_L_L_E_
 - 20346887 # BaeGotBooty
-- 10876762 # JadineIsNasty
-- 15042071 # Tat2peach
-- 21090122 # Cutekitty747
-- 11549213 # Jayde_Phoenix
-- 21578748 # Lolasays
 - 21948600 # TwerkAndChill
 
 # The next time the model comes online, her Model ID will be ADDED to "models" above.
@@ -89,7 +78,7 @@ excludeModels:
 Run
 ===========
 
-Via `Command Prompt` or `Cmder` (recommended):
+Via `Command Prompt` or `Cmder`:
 
 ```
   cd CapMyFreeCamsNodeJS # change to the package directory
